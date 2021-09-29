@@ -7,22 +7,22 @@ $(function () {
         wrapperClass: 'main-screen__cards-wrapper',
         // Responsive breakpoints
         breakpoints: {
-            320: {
+            480:{
                 centeredSlides: true,
                 slidesPerView: 1,
-                spaceBetween: 20,
-            } ,
-            640: {
+                spaceBetween: 0,
+                spaceBetween: 10,
+                loop: true,
+                loopAdditionalSlides: 3,
+            },
+            
+            720: {
                 centeredSlides: false,
-                slidesPerView: 2,
-                spaceBetween: 20,
-            } ,
-            800: {
-                centeredSlides: false,
-                slidesPerView: 3,
-                spaceBetween: 20,
-            } ,
-            990:{
+                slidesPerView: 5,
+                spaceBetween: 10,
+                loop: false
+            },
+            1024:{
                 slidesPerView: 5,
                 spaceBetween: 14
             }

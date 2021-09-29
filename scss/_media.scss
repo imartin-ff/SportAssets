@@ -1,4 +1,30 @@
-@media screen and (max-width: 720px){
+@media screen and (max-width: 1024px){
+   .main-screen__cards-card {
+       font-size: 12px;
+       .text{
+           font-size: 12px !important;
+       }
+   }
+   .main-screen__cards{
+       width: 100% !important;
+   }
+}
+
+@media screen and (max-width: 850px){
+    .main-screen__cards-card .text{
+        font-size: 10px !important;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 740px){
+    .main-screen__cards-card .text{
+        font-size: 8px !important;
+    }
+
     .header{
         &__contact{
             display: none; 
@@ -10,6 +36,7 @@
             width: 83px;
             height: 40px;
         }
+        
     }
 
     .main{
@@ -44,18 +71,20 @@
             .main-button{
                 margin-right: 50px !important;
             }
-            &__cards{
-                width: 500px !important;
-            }
+           
         }
     }
   
    
 
 }
-
-@media screen and (max-width: 480px){
+@media screen and (max-width: 740px){
     .main-screen__cards{
-        width: 280px !important;
+        width: 180px !important;
+        margin: 0 auto;
+        overflow: visible !important;
+        .text{
+            font-size: 10px !important;
+        }
     }
 }
