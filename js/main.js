@@ -7,7 +7,7 @@ $(function () {
         wrapperClass: 'main-screen__cards-wrapper',
         // Responsive breakpoints
         breakpoints: {
-            480:{
+            320:{
                 centeredSlides: true,
                 slidesPerView: 1,
                 spaceBetween: 0,
