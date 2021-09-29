@@ -4,6 +4,8 @@
 @import 'reset';
 @import 'libs';
 @import 'global';
+@import 'media';
+
 
 .main{
     overflow: hidden;
@@ -108,9 +110,11 @@
                font-size: 54px;
            }
        }
+       ul{
+        font-size: 16px;
+       }
        &__list{
            color: $font-first-color;
-           font-size: 16px;
            line-height: 140%;
            letter-spacing: 0.07em;
            font-weight: 300;

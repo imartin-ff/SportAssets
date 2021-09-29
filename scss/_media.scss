@@ -1,0 +1,61 @@
+@media screen and (max-width: 720px){
+    .header{
+        &__contact{
+            display: none; 
+        }
+        a.button{
+            display: none;
+        }
+        &__logo{
+            width: 83px;
+            height: 40px;
+        }
+    }
+
+    .main{
+        &-screen{
+            &__top{
+                padding-top: 60px !important;
+            }
+            &__title{
+                font-size: 24px;
+                .highlight{
+                    font-size: 24px !important;
+                }
+            }
+            &__overtitle{
+                display: none;
+            }
+            ul.main-screen__list{
+                font-size: 14px;
+                margin-bottom: 24px;
+            }
+            .income-wrapper{
+                .expected-income{
+                    font-size: 13px;
+                }
+                .income{
+                    font-size: 16px !important;
+                }
+                .time{
+                    margin-left: 9px !important;
+                }
+            }
+            .main-button{
+                margin-right: 50px !important;
+            }
+            &__cards{
+                width: 500px !important;
+            }
+        }
+    }
+  
+   
+
+}
+
+@media screen and (max-width: 480px){{
+    .main-screen__cards{
+        width: 280px !important;
+    }
+}
