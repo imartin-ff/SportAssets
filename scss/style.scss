@@ -1,0 +1,314 @@
+@import 'libs/hamburgers.css';
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+.main{
+    overflow: hidden;
+}
+
+.header{
+    background-color: $background-color-1;
+    padding: 40px 15px;
+    &__inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    &__nav-wrap{
+        display: flex;
+        align-items: center;
+        .button{
+            font-weight: 500;
+            font-size: 14px;
+            color: $font-first-color;
+            margin: 0px 50px;
+        }
+        .hamburger{
+            padding: 0px;
+            .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
+                width: 20px;
+                height: 4px;
+                background-color: #fff;
+            }
+            .hamburger-inner::after {
+                bottom: -7px;
+            }
+            .hamburger-inner::before {
+                top: -7px;
+            }
+            .hamburger-box {
+                width: 20px;
+                height: 10px;
+            }
+        }
+    }
+    &__contact{
+        &-phone, &-telegram{
+            font-size: 14px;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                left: -23px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:hover{
+                color: $font-second-color;
+            }
+        }
+        &-phone{
+            &::before{
+                background-image: url('../images/phone.svg');
+            }
+            margin-right: 45px;
+        }
+        &-telegram{
+            &::before{
+                background-image: url('../images/telegram.svg');
+            }
+        }
+        
+    }
+}
+
+
+.main{
+    &-screen{
+       background-color: $background-color-1;
+       background-image: url('../images/main-bg.svg'); 
+       background-position: top;
+       background-size: cover;
+       background-repeat: no-repeat;
+       &__top{
+           padding-top: 140px;
+           padding-bottom: 80px;
+       }
+       &__overtitle{
+           text-transform: uppercase;
+           font-size: 16px;
+           color: $font-first-color;
+           font-weight: 300;
+           letter-spacing: 0.155em;
+           margin-bottom: 30px;
+       }
+       &__title{
+           max-width: 705px;
+           margin-bottom: 25px;
+           .highlight{
+               font-size: 54px;
+           }
+       }
+       &__list{
+           color: $font-first-color;
+           font-size: 16px;
+           line-height: 140%;
+           letter-spacing: 0.07em;
+           font-weight: 300;
+           max-width: 500px;
+           list-style-type: none;
+           margin-left: 12px;
+           margin-bottom: 50px;
+           &-item{
+               position: relative;
+               &::before{
+                   content: "";
+                   position: absolute;
+                   width: 2px;
+                   height: 3px;
+                   background-color: #fff;
+                   border-radius: 3px;
+                   top: 50%;
+                   transform: translateY(-50%);
+                   left: -10px;  
+               }             
+           }
+       }
+       .d-flex{
+           align-items: center;
+       }
+       .main-button{
+           padding: 13px 35px;
+           color: #fff;
+           color: #FFFFFF;
+           text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+           font-size: 14px;
+           position: relative;
+           max-height: 42px;
+           &::after{
+               content: 'Акция';
+               position: absolute;
+               padding: 5px 15px;
+               text-align: center;
+               background: #EFA854;
+               border-radius: 2px;
+               color: black;
+               font-size: 12px;
+               font-weight: 600;
+               filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.15));
+               top: -9px;
+               right: -39px;
+           }
+           margin-right: 80px;
+       }
+       .income-wrapper{
+           display: flex;
+           flex-direction: column;
+           color: $font-second-color;
+           font-weight: 300;
+           span{
+            &:nth-child(1){
+                font-size: 16px;
+            }
+            &:nth-child(2){
+                font-size: 24px;
+                font-weight: bold;
+                margin: 3px 0px;
+            }
+            &:nth-child(3){
+                font-size: 14px;
+                position: relative;
+                color: $font-first-color;
+                margin-left: 20px;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    background-image: url('../images/clock.svg');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    left: -20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+           }
+       }
+
+
+       &__cards{
+           padding-top: 50px;
+           padding-bottom: 45px;
+           overflow: hidden;
+           width: 990px;
+           &-wrapper{
+            display: flex;
+            width: 100%;
+            height: 100%;
+           }
+           
+           &-card{
+               font-weight: 300;
+               flex-shrink: 0;
+               .d-flex{
+                   justify-content: space-between;
+               }
+               
+               .percent{
+                    color: #EFA854;
+               }
+
+             
+
+               span{
+                   display: block;
+               }
+               padding: 13px;
+               border: 1px solid #FFFFFF;
+               border-radius: 2px;
+               
+               color: $font-first-color;
+               &:last-child{
+                   margin-right: 0px;
+               }
+               .price{
+                   padding-top: 7px;
+                   padding-bottom: 13px;
+                   font-weight: 600;
+               }
+
+               .text{
+                   font-size: 15px;
+               }
+           }
+       }
+
+       &__rates{
+           h3{
+            color: $font-first-color;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 25px;
+           }
+           &-table{
+               width: 100%;
+               color: $font-first-color;
+               border-spacing: 0px;
+            //    border-collapse: collapse;
+            //    border-spacing:0 15px;
+            border-collapse: collapse;
+        border-spacing: 0 15px;
+              thead{
+                  th{
+                      font-weight: 300;
+                      text-align: left;
+                      font-size: 14px;
+                     
+                  }
+              }
+              tbody{
+                
+                  tr{
+                    background-image: linear-gradient(270deg, rgba(35, 35, 35, 0.3) 0%, rgba(41, 207, 48, 0.3) 100%);
+                    border: 1px solid #FFFFFF;
+                    border-radius: 2px;
+                    padding: 15px;
+                    border-color: #FFFFFF;
+                    td{
+                        font-weight: 400;
+                        font-size: 14px;
+                        padding: 10px 0px;
+                       
+                        &:first-child{
+                            font-size: 20px;
+                        }
+                        
+                        &:first-child{
+                            padding-left: 15px;
+                        }
+                        &:last-child{
+                            padding-right: 10px;
+                        }
+                        .button{
+                            max-height: 30px;
+                            color: $font-first-color;
+                            font-weight: bold;
+                        }
+                    }
+                  }
+
+                  .spacer{
+                    background-image: none;
+                    border: none;
+                    height: 10px;
+                }
+                  
+              }
+           }
+       }
+
+    }
+
+
+
+}
