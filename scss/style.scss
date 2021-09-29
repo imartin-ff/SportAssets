@@ -306,3 +306,145 @@
 
 
 }
+
+
+
+.tariffs{
+    padding: 110px 0;
+    position: relative;
+    &::after{
+        width: 248px;
+        height: 140px;
+        content: '';
+        position: absolute;
+        background-image: url('../images/figure.svg');
+        top: -44px;
+        right: 73px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &::before{
+        width: 216px;
+        height: 258px;
+        content: '';
+        position: absolute;
+        background-image: url('../images/donts-line.svg');
+        top: 0px;
+        right: 100px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__title{
+        max-width: 660px;
+        margin-bottom: 60px;
+    }
+    &__subtitle{
+        font-size: 25px;
+        color: $font-third-color;
+        margin-bottom: 30px;
+        font-weight: 300;
+    }
+    &__items{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        background: #F3F3F3;
+        border-radius: 2px;
+        padding: 35px;
+        &-list{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li{
+                margin-bottom: 13px;
+                color: $font-third-color;
+                position: relative;
+                margin-left: 60px;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    background-image: url('../images/plus.svg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: -20px;
+                }
+            }
+        }
+        &-title{
+            font-size: 28px;
+            font-weight: 700;
+            color: $font-third-color;
+            margin-bottom: 15px;
+        }
+        &-info{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 30px;
+        }
+        &-price{
+            font-size: 24px;
+            font-weight: 700;
+            color: $font-second-color;
+       
+        }
+        &-percent{
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.15));
+            border-radius: 2px;
+            background-color: #EFA854;
+            color: $font-first-color;
+            padding: 5px 12px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        &-about{
+            color: $font-third-color;
+            &:hover{
+                color: $font-second-color;
+            }
+        }
+
+        form{
+            p{
+                font-size: 14px;
+                line-height: 20px;
+                color: $font-third-color;
+                margin-bottom: 15px;
+            }
+            input[type="submit"]{
+                background-image: linear-gradient(94.46deg, #29CF30 0%, #44FF4C 99.99%, #BAFA9B 100%);
+                color: $font-first-color;
+                font-weight: 600;
+            }
+            select{
+                background: #FFFFFF;
+                border-radius: 2px;
+                padding: 10px 15px;
+                margin-bottom: 30px;
+                color: $font-second-color;
+                font-size: 14px;
+                font-weight: bold;
+                border: none;
+                width: 178px;
+                outline: none;
+                cursor: pointer;
+                appearance: none;
+                background-image: url("../images/arrow.svg");
+                background-position: 160px;
+                background-repeat: no-repeat;
+                transition: background 0.2s linear;
+                &:hover{
+                    background-color: #fafafa;
+                }
+            }
+        }
+    }
+}

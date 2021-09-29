@@ -8,6 +8,59 @@
    .main-screen__cards{
        width: 100% !important;
    }
+
+   .main-screen__rates-table{
+       
+       overflow-x: scroll;
+       min-width: 1020px;
+       
+   }
+
+
+
+
+//  TARIFFS
+
+   h2{
+       font-size: 32px;
+   }
+   .tariffs{
+       &::before{
+           display: none;
+       }
+       &__title{
+           max-width: 425px !important;
+           line-height: 40px;
+       }
+       &__item{
+        padding: 25px !important;
+        &-title{
+            font-size: 20px !important;
+        }
+        &-price{
+            font-size: 18px !important;
+        }
+        &-about{
+            font-size: 8px !important;
+        }
+        &-list{
+            font-size: 14px ; 
+            li{
+                margin-left: 40px !important;
+            }
+        }
+        form{
+            input[type="submit"]{
+                font-size: 13px;
+            }
+        }
+       }
+   }
+
+   
+}
+@media screen and (max-width: 900px){
+    
 }
 
 @media screen and (max-width: 850px){
@@ -83,7 +136,4 @@
   
    
 
-}
-@media screen and (max-width: 740px){
-   
 }
