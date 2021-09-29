@@ -448,3 +448,94 @@
         }
     }
 }
+
+
+.reviews{
+    background-color: #F8F8F8;
+    background-image: url('../images/reviews-bg.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 0px;
+    p{
+        font-size: 14px;
+        max-width: 222px;
+        color: $font-third-color;
+        margin-bottom: 20px;
+    }
+    .button{
+        background-image: linear-gradient(94.46deg, #29CF30 0%, #44FF4C 99.99%, #BAFA9B 100%);
+        color: $font-first-color;
+    }
+    &__slider{
+       margin-bottom: 70px;
+        overflow: hidden;
+        width: 100%;
+        margin-top: 72px;
+        &-wrapper{
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__slide{
+        border-radius: 2px;
+        .slide-inner{
+            position: relative;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: $font-first-color;
+            font-size: 13px;
+            cursor: pointer;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            &::before{
+                content: '';
+                position: absolute;  
+                width: 45px;
+                height: 56px;
+                top: 40%;
+                left: 54%;
+                transform: translate(-50%);
+                background-image: url('../images/play-btn.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-image:linear-gradient(180deg, rgba(50, 50, 50, 0) 54.48%, rgba(50, 50, 50, 0.7) 77.4%);
+                z-index: 1;
+            }
+            .name{
+                padding: 3px 15px;
+                font-weight: 700;
+                z-index: 2;
+            }
+            .descr{
+                padding: 0px 15px;
+                padding-bottom: 20px;
+                font-weight: 300;
+                z-index: 2;
+            }
+        }
+        flex-shrink: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        .reviews-date{
+            color: $font-third-color;
+            font-size: 13px;
+            display: block;
+            padding-top: 13px;
+        }
+        
+        }
+    }
+    

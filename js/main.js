@@ -16,7 +16,7 @@ $(function () {
                 loopAdditionalSlides: 3,
             },
             
-            720: {
+            780: {
                 centeredSlides: false,
                 slidesPerView: 5,
                 spaceBetween: 10,
@@ -28,5 +28,39 @@ $(function () {
             }
             
         }
+      })
+
+
+      const swiperReviews = new Swiper('.reviews__slider', {
+        // Default parameters
+        slidesPerView: 4,
+        spaceBetween: 70,
+        slideClass: 'reviews__slide',
+        wrapperClass: 'reviews__slider-wrapper',
+
+        breakpoints: {
+            320:{
+                centeredSlides: true,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                spaceBetween: 30,
+                loop: true,
+                loopAdditionalSlides: 3,
+            },
+            
+            780: {
+                centeredSlides: false,
+                slidesPerView: 4,
+                spaceBetween: 30,
+                loop: false
+            },
+            1024:{
+                slidesPerView: 4,
+                spaceBetween: 70
+            }
+            
+        }
+        // Responsive breakpoints
+        
       })
 })

@@ -23,6 +23,7 @@
 
    h2{
        font-size: 32px;
+       line-height: 35px;
    }
    .tariffs{
        &::before{
@@ -32,26 +33,51 @@
            max-width: 425px !important;
            line-height: 40px;
        }
+       &__subtitle{
+           font-size: 18px !important;
+       }
+       &__items{
+           justify-content: start !important;
+       }
        &__item{
-        padding: 25px !important;
+        padding: 20px 22px !important;
+        &:first-child{
+            margin-right: 35px;
+        }
+        &-info{
+            padding-bottom: 18px !important;
+        }
         &-title{
-            font-size: 20px !important;
+            font-size: 23px !important;
         }
         &-price{
-            font-size: 18px !important;
+            font-size: 21px !important;
+        }
+        &-percent{
+            font-size: 9px !important;
         }
         &-about{
-            font-size: 8px !important;
+            font-size: 10px !important;
         }
         &-list{
-            font-size: 14px ; 
+            font-size: 10px ; 
             li{
                 margin-left: 40px !important;
             }
         }
         form{
+            p{
+                font-size: 9px !important;
+                line-height: 13px !important;
+            }
             input[type="submit"]{
-                font-size: 13px;
+                font-size: 10px;
+                min-width: 160px;
+            }
+            select{
+                font-size: 10px !important;
+                width: 150px !important;
+                background-position: 130px !important;
             }
         }
        }
@@ -59,21 +85,20 @@
 
    
 }
-@media screen and (max-width: 900px){
-    
-}
+
 
 @media screen and (max-width: 850px){
     .main-screen__cards-card .text{
         font-size: 10px !important;
     }
+    
 }
 
 
 
 
 
-@media screen and (max-width: 740px){
+@media screen and (max-width: 780px){
     .main-screen__cards-card .text{
         font-size: 8px !important;
     }
@@ -134,6 +159,47 @@
         }
     }
   
-   
+    .tariffs{
+        &__subtitle{
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 84px;
+                height: 84px;
+                background-image: url('../images/figure2.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                top: -53px;
+                right: 14px;
+            }
+        }
+        padding: 75px 0 !important;
+        &::after{
+            width: 83px !important;
+            height: 47px !important;
+            top: -25px !important;
+            right: 299px !important;
+        }
+       &__item{
+           &:first-child{
+               margin-right: 0px !important;
+               margin-bottom: 30px;
+           }
+           width: 374px;
+       }
+        &__items{
+            flex-direction: column;
+        }
+       
+    }
+
+    .reviews__slider{
+        width: 214px !important;
+        margin: 0 auto;
+        overflow: visible !important;
+    }
+
 
 }
