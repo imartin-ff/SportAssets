@@ -21,7 +21,21 @@
        height: 124% !important;
        top: -62px !important; 
    }
-
+   .news{
+       &::after{
+          display: none;
+       }
+       &__col{
+            &:first-child{
+                flex: 2 !important;
+            }
+            &:last-child{
+               .button{
+                margin-left: 0px !important;
+               } 
+            }
+       }
+   }
   
 //  TARIFFS
 
@@ -86,8 +100,6 @@
         }
        }
    }
-
-   
 }
 
 
@@ -272,8 +284,70 @@
             
         }
     }
+
+    .news{
+        &__col:last-child{
+            .button{
+                margin-bottom: 0px !important;
+            }
+        }
+        padding: 50px 0px !important;
+        &::after{
+            display: block !important;
+            background-image: url('../images/figure.svg') !important;
+            width: 120px !important;
+            height: 53px !important;
+            background-size: cover;
+            top: -28px !important;
+            right: 36px !important;
+        }
+        &__wrapper{
+            max-width: 600px;
+        }
+       &__inner{
+           flex-direction: column;
+       }
+    }
+
+    .partners{
+        padding: 60px 0px 150px 0px !important;
+        &__inner{
+            flex-direction: column-reverse;
+            position: relative;
+            a.button{
+                position: absolute;
+                bottom: -90px;
+            }
+        }
+        &__slider{
+            width: 230px !important;
+            margin: 0 auto !important;
+            overflow: visible !important;
+        }
+    }
     
 }
 
 
 
+@media screen and (max-width: 500px){
+    .news{
+        &__wrapper{
+            flex-direction: column;
+        }
+        &__item{
+        padding: 15px;         
+        background: #F3F3F3 !important;
+        border-radius: 5px;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        margin-bottom: 15px !important;
+        }
+       &__col:last-child{
+           .button{
+               margin-top: 50px;
+           }
+       }
+    }
+}

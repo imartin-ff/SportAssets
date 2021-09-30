@@ -83,5 +83,32 @@ $(function () {
         
       })
 
+      
+      const swiperPartners = new Swiper('.partners__slider', {
+        // Default parameters
+        slidesPerView: 3,
+        spaceBetween: 16,
+        slideClass: 'partners__slide',
+        wrapperClass: 'partners__slider-wrapper',
+
+        breakpoints: {
+            320:{
+                centeredSlides: true,
+                slidesPerView: 1,
+                loop: true,
+                loopAdditionalSlides: 3,
+            },
+             
+            780: {
+                centeredSlides: false,
+                slidesPerView: 3,
+                spaceBetween: 16,
+                loop: false
+            },            
+            
+        }
+        
+      })
+
 
 })
