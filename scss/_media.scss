@@ -26,7 +26,7 @@
 //  TARIFFS
 
    h2{
-       font-size: 32px;
+       font-size: 29px;
        line-height: 35px;
    }
    .tariffs{
@@ -238,6 +238,42 @@
     .about .button{
         font-size: 14px;
     }
+
+    .text-reviews__inner{
+        flex-direction: column-reverse;
+        position: relative;
+        padding-bottom: 60px;
+        .comments{
+            margin-top: 50px;
+            margin-right: 0px !important;
+        }
+
+        .button{
+            position: absolute;
+            bottom: -10px; 
+            z-index: 6;
+        }
+    }
+    .packages{
+        padding: 60px 0px !important;
+       
+        padding-bottom: 180px !important;
+        &__inner{
+            flex-direction: column;
+            position: relative;
+        }
+        
+        &__calc{
+            position: absolute;
+            bottom: -140px;
+            flex-direction: row-reverse !important;
+            justify-content: space-between;
+            width: 100%;
+            
+        }
+    }
+    
 }
+
 
 
