@@ -16,9 +16,13 @@
        
    }
 
+   .videos::after{
+       width: 150px !important;
+       height: 124% !important;
+       top: -62px !important; 
+   }
 
-
-
+  
 //  TARIFFS
 
    h2{
@@ -91,6 +95,29 @@
     .main-screen__cards-card .text{
         font-size: 10px !important;
     }
+    .about{
+        &__text{
+            width: 100% !important;
+        }
+        &__inner{
+            flex-direction: column;
+            &-col{
+                &:first-child{
+                    width: 100% !important;
+                }
+                &:last-child{
+                    margin-left: 0px !important;
+                }
+            }
+        }
+        &__title{
+            max-width: 100% !important;
+        }
+        .button{
+            margin-top: 30px !important;
+        }
+    }
+    
     
 }
 
@@ -201,5 +228,16 @@
         overflow: visible !important;
     }
 
+    .videos__slider{
+        display: block !important;
+    }
+    .videos__wrapper{
+        display: none !important;
+    }
 
+    .about .button{
+        font-size: 14px;
+    }
 }
+
+

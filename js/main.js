@@ -60,7 +60,28 @@ $(function () {
             }
             
         }
-        // Responsive breakpoints
         
       })
+
+
+      const swiperVideos = new Swiper('.videos__slider', {
+        // Default parameters
+        slidesPerView: 1,
+        spaceBetween: 15,
+        slideClass: 'videos__slider-slide',
+        wrapperClass: 'videos__slider-wrapper',
+
+        breakpoints: {
+            320:{
+                centeredSlides: true,
+                slidesPerView: 1,
+                loop: true,
+                loopAdditionalSlides: 3,
+            },
+            
+        }
+        
+      })
+
+
 })
