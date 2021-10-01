@@ -9,13 +9,6 @@
        width: 100% !important;
    }
 
-   .main-screen__rates-table{
-       
-       overflow-x: scroll;
-       min-width: 1020px;
-       
-   }
-
    .videos::after{
        width: 150px !important;
        height: 124% !important;
@@ -89,7 +82,6 @@
                 line-height: 13px !important;
             }
             input[type="submit"]{
-                font-size: 10px;
                 min-width: 160px;
             }
             select{
@@ -101,7 +93,13 @@
        }
    }
 
-
+  .main-screen__rates-table--mobile{
+      display: block !important;
+      
+  }
+  .main-screen__rates-table--desktop{
+      display: none;
+  }
  
 }
 
@@ -209,10 +207,15 @@
 
 
 @media screen and (max-width: 780px){
+    .btn-primary{
+        font-size: 12px;
+    }
     .main-screen__cards-card .text{
         font-size: 8px !important;
     }
-
+    .main-screen__rates-table--mobile{
+        font-size: 12px !important;
+    }
     .header{
         &__contact{
             display: none; 
@@ -318,9 +321,6 @@
         display: none !important;
     }
 
-    .about .button{
-        font-size: 14px;
-    }
 
     .text-reviews__inner{
         flex-direction: column-reverse;
@@ -476,6 +476,9 @@
             input{
                 margin-right: 0px !important;
                 margin-bottom: 10px;
+            }
+            input[type="submit"]{
+                width: 100% !important;
             }
         }
     }
