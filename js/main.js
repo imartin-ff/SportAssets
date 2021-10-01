@@ -116,7 +116,7 @@ $(function () {
         slidesPerView: 1,
         spaceBetween: 10,
         slideClass: 'qa__tabs-item',
-        wrapperClass: 'qa__tabs-wrapper',
+        wrapperClass: 'qa__tabs-wrap',
         // Responsive breakpoints
         breakpoints: {
             320:{
@@ -163,7 +163,7 @@ $(function () {
 
 
 
-      $( "#accordion" ).accordion({
+      $( ".accordion" ).accordion({
         heightStyle: 'content'
       });
 })
