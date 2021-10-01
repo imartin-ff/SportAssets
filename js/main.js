@@ -111,4 +111,59 @@ $(function () {
       })
 
 
+      const swiperQa = new Swiper('.qa__tabs', {
+        // Default parameters
+        slidesPerView: 1,
+        spaceBetween: 10,
+        slideClass: 'qa__tabs-item',
+        wrapperClass: 'qa__tabs-wrapper',
+        // Responsive breakpoints
+        breakpoints: {
+            320:{
+                slidesPerView: 1,
+            },
+          
+
+            1040:{
+                slidesPerView: 7,
+                spaceBetween: 10
+            }
+            
+        }
+      })
+
+      const swiperEducation= new Swiper('.education__videos', {
+        slidesPerView: 3,
+        slidesPerColumn: 2,
+        slidesPerColumnFill: 'row',
+        slideClass: 'education__video',
+        wrapperClass: 'education__videos-wrapper',
+        touchRatio: 0,
+        breakpoints: {
+            320:{
+                slidesPerView: 1,
+                loop: true,
+                touchRatio: 1,
+                centeredSlides: true,
+                slidesPerView: 1,
+                loop: true,
+                loopAdditionalSlides: 2,
+                spaceBetween: 30
+                
+            },
+            1040:{
+                slidesPerView: 3,
+                slidesPerColumn: 2,
+                slidesPerColumnFill: 'row',
+                slidesPerGroup: 3,
+            }
+            
+        }
+      })
+
+
+
+      $( "#accordion" ).accordion({
+        heightStyle: 'content'
+      });
 })
