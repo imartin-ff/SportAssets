@@ -131,6 +131,26 @@ $(function () {
             
         }
       })
+      const swiperTabs = new Swiper('.tabs', {
+        // Default parameters
+        slidesPerView: 1,
+        spaceBetween: 10,
+        slideClass: 'tabs-item',
+        wrapperClass: 'tabs-wrap',
+        // Responsive breakpoints
+        breakpoints: {
+            320:{
+                slidesPerView: 1,
+            },
+          
+
+            1040:{
+                slidesPerView: 6,
+                spaceBetween: 10
+            }
+            
+        }
+      })
 
       const swiperEducation= new Swiper('.education__videos', {
         slidesPerView: 3,
