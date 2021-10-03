@@ -9,7 +9,7 @@
 // pages
 @import 'help-page';
 @import 'news-page';
-
+@import 'where-page';
 .main{
     overflow: hidden;
 }
@@ -257,7 +257,6 @@
            .main-screen__rates-table--mobile{
                display: none;
                font-size: 14px;
-               letter-spacing: 1.5px;
                .bet-header{
                    font-size: 24px;
                }
