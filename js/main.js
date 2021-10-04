@@ -1,4 +1,7 @@
+
+
 $(function () {
+
     const swiper = new Swiper('.main-screen__cards', {
         // Default parameters
         slidesPerView: 5,
@@ -131,7 +134,7 @@ $(function () {
             
         }
       })
-      const swiperTabs = new Swiper('.tabs', {
+      const swiperTabs = new Swiper('.news-page .tabs', {
         // Default parameters
         slidesPerView: 1,
         spaceBetween: 10,
@@ -182,8 +185,42 @@ $(function () {
       })
 
 
+      const aboutSlider = new Swiper('.quality-slider', {
+        slidesPerView: 3,
+        spaceBetween: 85,
+        slideClass: 'quality-slide',
+        wrapperClass: 'quality-wrapper',
+        breakpoints: {
+            320:{
+                slidesPerView: 1,
+                spaceBetween: 30
+                
+            },
+            780:{
+                slidesPerView: 3,
+                spaceBetween: 70
+                
+            },
+            1040:{
+                slidesPerView: 3,
+            }
+            
+        }
+      });
+
 
       $( ".accordion" ).accordion({
         heightStyle: 'content'
       });
+
+
+      const inputRange = document.getElementById('sum');
+      const sum = $('.sum')[0];
+      const result = $('.result')[0];
+      inputRange.addEventListener('change', function(){
+          sum.innerText = `${inputRange.value}₽`;
+          result.innerText = `+ ${inputRange.value * 3.3}₽`;
+      })
+
+
 })

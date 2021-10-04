@@ -104,6 +104,12 @@
             font-size: 12px;
             letter-spacing: 0.02em;
             color: #4B4B4B;
+            span{
+                display: block;
+            }
+            .mobile-title{
+                display: none;
+            }
             &-wrap{
                 display: flex;
                 align-items: center;
@@ -220,7 +226,47 @@
     }
     
 }
+@media screen and (max-width: 1024px){
+    .best__text{
+        font-size: 14px;
+    }
+    .best__table-titles{
+        width: 300px;
+        span{
+            font-size: 9px;
+        }
+    }
+   
+    .best__table-item-wrap{
+        width: 300px;
+        font-size: 9px;
+        img{
+            width: 35px;
+        }
+    }
 
+    .best__table-item-nav{
+        width: 170px;
+        a{
+            font-size: 9px !important;
+        }
+        .button{
+            width: 73px;
+        }
+    }
+    .best__sidebar{
+        &-content{
+
+            line-height: 200%;
+        }
+        ul li a{
+            font-size: 9px;
+        }
+        .sort{
+            font-size: 9px;
+        }
+    }
+}
 
 @media screen and (max-width: 780px){
     .where-page{
@@ -244,9 +290,87 @@
             }
         }
     }
+
+
+    .best{
+        &__inner{
+            flex-direction: column;
+            position: relative;
+          
+        }
+        &__table{
+            margin-right: 0px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        &__sidebar{
+            ul li a{
+                font-size: 12px;
+            }
+            .sort{
+                position: absolute;
+                top: 19px;
+                right: 15px;
+                margin: 0;
+            }
+        }
+    }
 }
+@media screen and (max-width: 580px){
+    .best__sidebar{
+        .sort{
+            top: -30px;
+            left: 0px;
+            right: auto;
+        }
+       
+    }
+    .best__table-titles{
+        display: none;
+    }
+  .best__table-item{
+      flex-direction: column;
+      padding-bottom: 15px;
+      .mobile-title{
+        font-size: 10px;
+        letter-spacing: 0.02em;
+        color: #6F6F6F;
+        font-weight: 500;
+        margin-bottom: 5px;
+        display: block !important;
+      }
+      &-wrap{
+          justify-content: space-between;
+          margin: 0 auto;
+          padding: 10px 0px;
+          padding-bottom: 20px;
+          img{
+              width: 80px;
+          }
+      }
 
+      span{
+          font-size: 12px;
+          flex: none;
+          position: relative;
+          
+          &:first-child{
+              flex: none;
+          }
+          &:nth-child(4), &:nth-child(5){
+              display: none;
+          }
+      }
+      .best__table-item-nav
+      {
+          width: 300px;
+          .button{
+              width: 110px;
+          }
+      }
+  }
 
+}
 @media screen and (max-width: 480px){
     .where-page{
         .main-screen{

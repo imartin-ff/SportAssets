@@ -1,0 +1,284 @@
+.marathon-page{
+    .main-screen{
+        &__top{
+            display: flex;
+            padding-top: 180px;
+            padding-bottom: 120px;
+        }
+        &__col{
+            flex: 1;
+            &:first-child p{
+                line-height: 154.69%;
+                letter-spacing: 0.02em;
+                font-weight: 500;
+                color: #FFFFFF;
+                position: relative;
+                padding-left: 50px;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    background-image: url('../images/attention.svg');
+                    height: 71px;
+                    width: 14px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    top: 0;
+                    left: 3px;
+                }
+            }
+
+            &:last-child{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                p{
+                    font-size: 14px;
+                    color: #fff;
+                    max-width: 272px;
+                    margin-right: 62px;
+                    margin-top: 20px;
+                }
+                h5{
+                    font-size: 18px;
+                    line-height: 120.69%;
+                    letter-spacing: 0.02em;
+                    color: #FFFFFF;
+                    text-align: right;
+                    margin-bottom: 25px;
+                }
+                .main-screen__timer{
+                    display: flex;
+                    justify-content: flex-end;
+                   
+                    &-number{
+                        font-size: 40px;
+                        font-weight: bold;
+                        color: $font-second-color;
+                    }
+                    &-item{
+                        width: 105px;
+                        height: 105px;
+                        color: #fff;
+                        margin-left: 10px;
+                        span{
+                            display: block;
+                        }
+                        text-align: center;
+                        border: 1px solid #FFFFFF;
+                    box-sizing: border-box;
+                    border-radius: 1.57663px;
+                    padding: 15px;
+                    }
+                }
+            
+            }
+        }
+    }
+
+    .tabs{
+        &-wrapper{
+            padding-bottom: 100px;
+        }
+        display: flex;
+        &-item{
+            padding: 10px 20px;
+            border: 1px solid #fff;
+            color: #fff;
+            border-radius: 2px;
+            margin-right: 10px;
+            font-size: 14px;
+            transition: all 0.2s linear;
+            cursor: pointer;
+            &:hover{
+                border: 1px solid $font-second-color;
+                color: $font-second-color
+            }
+            &--active{
+                border:  1px solid $font-second-color;
+                color: $font-second-color
+            }
+        }
+    }
+
+
+    .stock{
+        color: $font-first-color;
+        &__title{
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .your-id{
+            font-size: 14px;
+            color: #ADADAD;
+        }
+        
+        &__progress{
+            width: 100%;
+            margin-top: 60px;
+            border: 1px solid #FFFFFF;
+            border-radius: 3px;
+            padding: 20px 17px;
+            &-title{
+                font-size: 14.9518px;
+                letter-spacing: 0.02em;
+                color: #FFFFFF;
+            }
+            &-line{
+                margin-top: 28px;
+                background: #6D6D6D;
+                border-radius: 100px;
+                height: 25px;
+                &-inner{
+                    background: linear-gradient(90deg, #6DE572 0.48%, #50DB55 100%);
+                    border-radius: 100px;
+                    font-size: 12px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding-right: 15px;
+                }
+            }
+            .d-flex{
+                justify-content: space-between;
+                font-size: 12px;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+
+
+.chances{
+    margin-top: 80px;
+    color: #fff;
+    &__title{
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+    &__item{
+        border: 1px solid #FFFFFF;
+        border-radius: 3px;
+        padding: 20px 17px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        h5{
+            font-size: 15px;
+            max-width: 380px;
+            a{
+                text-decoration: underline;
+            }
+
+        }
+        &-buttons{
+            display: flex;
+            align-items: center;
+            a{
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px){
+    .marathon-page{
+        .main-screen{
+            &__top{
+               padding: 100px 0;
+            }
+            &__col:first-child{
+                p{
+                    font-size: 12px;
+                    padding-left: 30px;
+                    &::before{
+                        height: 54px;
+                        width: 9px;
+                    }
+                }
+            }
+            &__col:last-child{
+                p{
+                    font-size: 10px;
+                }
+            }
+            &__timer{
+                &-item{
+                    margin-left: 0px !important;
+                    margin-right: 10px;
+                }
+            }
+        }
+        .tabs{
+            width: 100%;
+        }
+        .tabs-item{
+            width: 140px;
+            text-align: center;
+        }
+    }
+
+}
+
+@media screen and (max-width: 780px){
+    .marathon-page{
+        .main-screen{
+            &__top{
+               flex-direction: column;
+            }
+            &__col:first-child{
+                p{
+                    font-size: 16px;
+                    padding-left: 0;
+
+                    &::before{
+                        display: none;
+                    }
+                }
+            }
+            &__col:last-child{
+                align-items: flex-start;
+                padding-top: 50px;
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+        .stock{
+            &__title{
+                font-size: 16px;
+            }
+        }
+        .chances{
+            &__title{
+                font-size: 16px;
+            }
+            &__item{
+                &-title{
+                    font-size: 14px;
+                }
+                a.button{
+                    width: 108px;
+                    font-size: 12px;
+                }
+            }
+
+            .col{
+                flex-direction: column;
+                a{
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+
+}
