@@ -336,7 +336,8 @@
                       Количество дней <br>
                       Больше дней — больше скидка
                     </p>
-                    <select>
+                    <select class="select">
+                      <option disabled>10 Дней </option>
                       <option value="10">10 Дней </option>
                       <option value="10">15 Дней</option>
                       <option value="10">20 Дней</option>
@@ -376,7 +377,8 @@
                       Количество дней <br>
                       Больше дней — больше скидка
                     </p>
-                    <select>
+                    <select  class="select">
+                      <option disabled >10 Дней </option>
                       <option value="10">10 Дней </option>
                       <option value="10">15 Дней</option>
                       <option value="10">20 Дней</option>
@@ -637,6 +639,8 @@
                   <span class="result sum">+ 330 000 ₽</span>
                   <span class="calc-descr">Заработок за 9 месяцев использования нашего сервиса</span>
                 </div>
+
+                
               </div>
             </div>
 
@@ -981,6 +985,18 @@
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   <script src="js/main.min.js"></script>
+  <script>
+
+    // Какой пакет выбрать?
+    const inputRange = document.getElementById('sum');
+    const sum = $('.sum')[0];
+    const result = $('.result')[0];
+    inputRange.addEventListener('change', function(){
+        sum.innerText = `${inputRange.value}₽`;
+        result.innerText = `+ ${inputRange.value * 3.3}₽`;
+    }) 
+    
+    </script>
 </body>
 
 </html>

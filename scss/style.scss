@@ -12,6 +12,7 @@
 @import 'where-page';
 @import 'marathon-page';
 @import 'about-page';
+@import 'forecast-page';
 
 
 
@@ -150,12 +151,16 @@
        }
        .main-button{
            padding: 13px 35px;
-           color: #fff;
            color: #FFFFFF;
            text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
            font-size: 14px;
            position: relative;
            max-height: 42px;
+           font-weight: 700;
+           animation: shake 3s infinite ease-in-out;
+           &:hover{
+               transform: scale(1) !important;
+           }
            &::after{
                content: 'Акция';
                position: absolute;
@@ -266,10 +271,20 @@
                    font-size: 24px;
                }
                .table-item{
-                background-image: linear-gradient(270deg, rgba(35, 35, 35, 0.3) 0%, rgba(41, 207, 48, 0.3) 100%);
+                background: linear-gradient(270deg, rgba(35, 35, 35, 0.3) 0%, rgba(41, 207, 48, 0.3) 100%);
                 border: 1px solid #FFFFFF;
                 padding: 13px;
                 margin-bottom: 15px;
+                &--grey{
+                    background: linear-gradient(270deg, rgba(35, 35, 35, 0.3) 0%, rgba(231, 62, 62, 0.3) 100%);
+                    .highlight{
+                        color: #fff !important;
+                    }
+                    .loss{
+                        color: #AAA9A9 !important;
+                    }
+                    
+                }
                }
                .table-row{
                    display: flex;
@@ -279,6 +294,7 @@
                    justify-content: space-between;
                    line-height:25px;
                    margin-bottom: 10px;
+                   
                    .button{
                         height: 35px;
                      }
@@ -292,6 +308,7 @@
                            margin-left: 30px;
                        }
                    }
+                  
                }
                
            }
@@ -310,10 +327,21 @@
                font-size: 14px;
                font-weight: 300;
                align-items: center;
-               background-image: linear-gradient(270deg, rgba(35, 35, 35, 0.3) 0%, rgba(41, 207, 48, 0.3) 100%);
+               background: linear-gradient(270deg, rgba(35, 35, 35, 0.3) 0%, rgba(41, 207, 48, 0.3) 100%);
                 border: 1px solid #FFFFFF;
                 border-radius: 2px;
                 margin-bottom: 10px;
+                &-grey{
+                    background: linear-gradient(270deg, rgba(35, 35, 35, 0.3) 0%, rgba(231, 62, 62, 0.3) 100%);
+                    
+                    .highlight{
+                        color: #fff;
+                    }
+                    .loss{
+                        color: #AAA9A9;
+                        font-weight: bold;
+                    }
+                }
                 &:first-child{
                     background-image: none;
                     border: none;
@@ -491,6 +519,95 @@
                 &:hover{
                     background-color: #fafafa;
                 }
+            }
+
+            .select {
+                display: block;
+                max-width: 215px;
+                width: 100%;
+                position: relative;
+                
+            }
+            
+            .new-select {
+                position: relative;
+                padding: 10px 15px;
+                border: 1px solid #ced4da;
+                color: $font-second-color;
+                font-size: 14px;
+                font-weight: bold;
+                border: none;
+                width: 178px;
+                outline: none;
+                cursor: pointer;
+                appearance: none;
+                background-image: url("../images/arrow.svg");
+                background-position: 160px;
+                background-repeat: no-repeat;
+                transition: background 0.2s linear;
+                background-color: #fff;
+                margin-bottom: 30px;
+                &:hover{
+                    background-color: #fafafa;
+                }
+                cursor: pointer;
+                user-select: none;
+            }
+            
+            .new-select__list {
+                position: absolute;
+                top: 40px;
+                left: 0;
+                border: 1px solid #ced4da;
+                border-radius: 2px;
+                cursor: pointer;
+                width: 100%;
+                font-size: 14px;
+                z-index: 2;
+                background: #fff;
+                user-select: none;
+            }
+            
+            .new-select__list.on {
+                display: block;
+            }
+            
+            .new-select__item span {
+                display: block;
+                padding: 10px 15px;
+            }
+            
+            .new-select__item span:hover {
+                color: #12b223;
+                background-color: #fafafa;
+            }
+            
+            .new-select:after {
+                content: '';
+                display: block;
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                right: 9px;
+                top: 9px;
+                background: url('path-to-image') no-repeat right center / cover;
+                opacity: 0.6;
+            
+                -webkit-transition: all .27s ease-in-out;
+                    -o-transition: all .27s ease-in-out;
+                        transition: all .27s ease-in-out;
+            
+                -webkit-transform: rotate(0deg);
+                    -ms-transform: rotate(0deg);
+                     -o-transform: rotate(0deg);
+                        transform: rotate(0deg);
+            }
+            
+            .new-select.on:after {
+                -webkit-transform: rotate(180deg);
+                    -ms-transform: rotate(180deg);
+                     -o-transform: rotate(180deg);
+                        transform: rotate(180deg);
             }
         }
     }

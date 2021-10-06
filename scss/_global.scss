@@ -61,6 +61,16 @@ button.button , input.button{
 	}
 }
 
+
+
+button.button:disabled{
+	background-color: #504E4E;
+	background-image: none;
+	cursor: default;
+	&:hover{
+		transform: scale(1) !important;
+	}
+}
 a.button{
 	display: flex;
 	justify-content: center;
@@ -82,6 +92,11 @@ a.button{
     color: #fff;
 	font-size: 14px;
 	width: 150px;
+}
+
+button.button-grey{
+	background-color: #504E4E;
+	background-image: none !important;
 }
 
 .play-button{
@@ -121,4 +136,20 @@ h1{
 
 .d-flex{
 	display: flex;
+}
+
+
+
+
+@keyframes shake {
+	10%, 20%, 30%, 40%, 90% {
+	  transform: translate3d(0, 0, 0);
+	}
+	50%,60%,70%,80%{
+		transform: translate3d(-3px, 0, 0);
+	}
+	55%, 65%, 75%, 85%{
+		transform: translate3d(3px, 0, 0);
+	}
+	
 }

@@ -4,6 +4,12 @@
     background-repeat: no-repeat;
     background-position: center;
     padding-top: 130px;
+    .contact{
+        background-color: #F3F3F3;
+        form{
+            background-color: #fff;
+        }
+    }
    .about-main{
        &__inner{
            display: flex;

@@ -32,6 +32,7 @@
             }
        }
    }
+   
   
 //  TARIFFS
 
@@ -86,6 +87,19 @@
             }
             input[type="submit"]{
                 min-width: 160px;
+            }
+            .new-select{
+                max-width: 150px !important;
+                font-size: 10px;
+                background-position: 130px;
+            }
+            .new-select__item span{
+                font-size: 10px;
+
+            }
+            .new-select__list{
+                width: 150px;
+                top: 35px;
             }
             select{
                 font-size: 10px ;
